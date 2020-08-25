@@ -1,0 +1,997 @@
+@import vars
+@import fonts
+@import libs
+
+::placeholder
+	color: $text-dark_gray
+
+::selection
+	background-color: $text-green
+	color: $text-white
+
+
+input, textarea, button 
+	outline: none !important
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+html, body
+	height: 100%	
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.5
+	letter-spacing: .6px
+	font-family: 'WiGuru4', sans-serif
+	overflow: hidden
+	color: $text-white
+
+img
+	max-width: 100%
+
+a, a:hover
+	color: $text-green
+	outline: none
+
+.text-color-green
+	color: $text-green
+
+
+.ring
+	border: 3px solid $text-green
+	border-radius: 50%
+	position: absolute
+
+.bottom-0
+	bottom: 0 !important
+
+.right-0
+	right: 0 !important
+
+.top-0
+	top: 0 !important
+
+.left-0
+	left: 0 !important	
+
+.caret
+	margin-left: 5px
+
+// sidebar -- start
+.sidebar
+	background-color: $text-white
+	height: 100%
+	z-index: 1
+	color: $text-black
+	width: 200px
+	position: sticky
+	top: 0
+	height: calc(100vh - 0rem)
+	&__title
+		padding: 
+			left: 0.93rem
+			right: 0.93rem
+			top: 1.25rem
+	&__menu
+		max-height: 100%
+		height: calc(100% - 155px)
+		overflow-y: auto
+		padding: 0.93rem
+		scrollbar-width: none;
+		&::-webkit-scrollbar 
+			width: 0px;
+			background: rgba(255, 255, 255, 0.0);
+	&__item
+		list-style-type: none
+		padding: 
+			top: 5px
+			bottom: 9px
+		font-size: 14px
+		transition: 0.3s
+		&:hover
+			font-size: 19px
+		a
+			text-decoration: none
+	&__link
+		display: block
+		color: $text-black
+		&-number
+			line-height: 0.6
+		&:hover
+			color: $text-black
+	&__contact
+		padding: 0.93rem
+		font-size: 1.12rem
+		a
+			color: $text-black
+			text-decoration: none
+	&__close
+		display: none
+		position: absolute
+		width: 30px
+		height: 30px
+		right: 0
+		align-items: center
+		justify-content: center	
+		cursor: pointer
+	&__toggle-btn
+		display: none
+		border-bottom: 1px solid $text-gray	
+		font-family: 'Prototype', sans-serif
+		font-size: 14px	
+// sidebar -- end
+
+// content -- start 
+.content
+	height: calc(100vh - 3.6rem)!important
+	overflow-y: auto
+	position: relative
+	&__slider
+		height: calc(100vh - 9rem) !important
+		position: relative
+		&__image-slider1
+			background-image: url(../img/slider-img1.png)
+			background-position: center
+			background-repeat: no-repeat
+			background-size: cover
+			position: absolute
+			width: 40%
+			height: 84%
+			left: calc(100% - 65%)
+			bottom: 0
+		&__image-slider2
+			background-image: url(../img/slider-img2.png)
+			background-position: center
+			background-repeat: no-repeat
+			background-size: cover
+			position: absolute
+			width: 40%
+			height: 84%
+			left: calc(100% - 65%)
+			bottom: 0
+		&-title
+			font-family: 'Prototype', sans-serif
+			padding-top: 70px
+		&__description
+			font-family: 'Prototype', sans-serif
+			&-bottom
+				padding-top: 20%
+			&-title-fz
+				font-size: 13px
+		.slick-arrow
+			position: absolute
+			z-index: 9
+			top: calc(100% - 60%)
+		.slick-prev
+			font-size: 0
+			border: 0
+			background-color: rgba(0, 0, 0, 0.0) 
+			background-image: url('../img/svg/slider-double-left-arrow.svg')
+			background-repeat: no-repeat
+			background-position: center
+			background-size: contain
+			height: 90px
+			width: 50px
+			margin: 0 10px
+			&:hover
+				background-image: url('../img/svg/slider-double-left-arrow-hover.svg')
+		.slick-next
+			right: 0
+			font-size: 0
+			border: 0
+			background-color: rgba(0, 0, 0, 0.0) 
+			background-image: url('../img/svg/slider-double-right-arrow.svg')
+			background-repeat: no-repeat
+			background-position: center
+			background-size: contain
+			height: 90px
+			width: 50px
+			margin: 0 10px
+			&:hover
+				background-image: url('../img/svg/slider-double-right-arrow-hover.svg')
+		.slick-dots
+			position: absolute
+			bottom: 0
+			width: 100%
+			display: flex
+			list-style-type: none
+			justify-content: center
+			margin-bottom: 6px
+			padding-left: 0
+			li
+				button
+					border: 0
+					font-size: 0
+					background-color: transparent
+					width: 10px
+					height: 10px
+					display: flex
+					align-items: center
+					padding: 0
+					margin: 3px
+					justify-content: center
+					&::before
+						content: " "
+						border: 1.5px solid $text-green
+						width: 10px
+						height: 10px
+						border-radius: 50px
+						background-color: #000
+						display: block
+						transition: 0.5s
+				&:hover
+					button
+						&::before
+							background-color: $text-green		
+				&.slick-active
+					button
+						&::before
+							background-color: $text-green
+	&__bottom-block
+		bottom: 0
+		background-color: $text-black
+		a
+			font-family: 'Prototype', sans-serif
+			text-transform: uppercase
+			font-size: 13px
+			position: relative
+			text-decoration: none
+			&::after
+				content: ""
+				width: 100%
+				height: 1px
+				background-color: transparent
+				position: absolute
+				left: 0
+				bottom: 0
+				transition: 0.3s
+			&:hover 
+				&::after
+					background-color: $text-green				
+// content -- end 
+
+// header -- start 
+.header
+	background-color: $text-black
+	position: sticky
+	top: 0
+	z-index: 99
+	height: 60px
+	display: flex
+	&__logo
+		width: 180px
+		padding-right: 1rem
+	&__nav>.nav-item>.nav-link
+			padding: 1.1rem 0.8rem
+	&__nav-link
+		text-transform: uppercase
+		color: $text-gray
+		cursor: pointer
+		-webkit-user-select: none
+		-moz-user-select: none
+		-ms-user-select: none
+		user-select: none
+		transition: 0.3s
+		&:hover
+			color: $text-green
+			transition: 0.3s
+			.caret svg path
+				stroke: $text-green
+	.mouse .nav-item:hover>.header__nav-sub
+		opacity: 1	
+		visibility: inherit
+		height: auto
+	.touch .active
+		display: block
+		opacity: 1	
+		visibility: inherit
+		height: auto
+	&__nav-sub
+		position: absolute	
+		list-style-type: none
+		padding: 0
+		z-index: 100
+		margin: 0
+		opacity: 0
+		height: 0
+		visibility: hidden
+		transition: 0.2s
+		.nav-item
+			background-color: #1b1b1b
+		&-sub
+			right: -100%
+			top: 0
+			height: 0
+	&__block
+		width: 420px
+		display: flex
+		align-items: center
+		justify-content: space-between
+	&__button-phone
+		margin-left: auto	
+	&__menu
+		&-button-sidebar
+			display: none
+			width: 35px
+			height: 35px
+			background-color: #000
+			border-radius: 100px
+			margin-right: 10px
+			align-items: center
+			justify-content: center
+			cursor: pointer
+		&-nav
+			display: flex
+			align-items: center		
+			padding: 0	
+// header -- end
+
+// burger -- start
+.burger
+	display: none
+	background: none
+	border: 0
+	cursor: pointer
+	padding: 10px 5px
+	outline: 0 !important
+	&__item
+		display: block
+		width: 30px
+		height: 3.2px
+		background-color: $text-white
+		border-radius: 5px
+		font-size: 0
+		color: transparent
+		position: relative
+		&::before,
+		&::after
+			content: ''
+			width: 100%
+			height: 3.2px
+			position: absolute
+			right: 0
+			z-index: 1
+			background-color: $text-white
+			border-radius: 5px
+			transition: 0.3s	
+		&::before
+			top: -8px
+		&::after
+			bottom: -8px
+	&-active
+		.burger__item
+			background: transparent
+		.burger__item::before
+			top: 0
+			transform: rotate(-45deg)	
+		.burger__item::after
+			bottom: 0
+			transform: rotate(45deg)
+// burger -- end	
+
+// btn -- start  		
+.button
+	display: inline-block
+	border: 0
+	font-weight: 400
+	font-family: 'Prototype', sans-serif
+	text-align: center
+	vertical-align: middle
+	-webkit-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+	background-color: transparent
+	font-size: 12px
+	text-transform: uppercase
+	text-decoration: none !important
+	line-height: 1.5
+	letter-spacing: .6px
+	border-radius: 100px
+	transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out
+	&--drenched
+		background-color: $text-green
+		color: $text-white !important
+		padding: 11px 25px 10px 25px;
+	&--border
+		background-color: $text-black
+		border: 2px solid $text-green
+		color: $text-green
+		padding: 10px 23px 9px 23px;
+	&__icon-phone
+		&::before
+			content: ""
+			width: 15px
+			height: 15px
+			background-image: url('../img/svg/phone.svg')
+			background-position: center
+			background-repeat: no-repeat
+			background-size: cover
+			display: inline-block
+			margin-right: 5px
+	&__arrow-black
+		color: #000 !important
+		padding-right: 40px
+		position: relative
+		&::after
+			content: ''
+			width: 15px
+			height: 15px
+			background-image: url('../img/svg/arrow-black-button.svg')
+			background-position: center
+			background-repeat: no-repeat
+			background-size: contain
+			position: absolute
+			right: 17px
+			top: 13px
+	&__filter
+		color: $text-white	
+		text-transform: initial	
+		font-size: 16px
+		display: none
+// btn -- end
+
+// search -- start 	 
+.search
+	padding: 
+		left: .62rem
+		right: .62rem
+	&:after
+		content: ""
+		width: 100%
+		height: 1.3px
+		background-color: $text-dark_gray
+		display: block
+	&__input
+		border: 0
+		background-color: rgba(255, 255, 255, 0.0)
+		width: 150px
+		color: $text-gray
+	&__button
+		border: 0
+		background-color: rgba(255, 255, 255, 0.0)
+		padding-right: 0
+		&-icon
+			width: 15px
+// search -- end
+
+// modal-request -- start 	 			
+.modal-request-a-call
+	position: absolute	
+	top: 77px
+	z-index: 999
+	right: 100px
+	background-color: $text-black
+	border: 1.2px solid $text-gray
+	width: 340px	
+	border-radius: 5px
+	border-top-right-radius: 0
+	&__content
+		position: relative	
+		padding: 35px 25px 25px 25px
+	&__close
+		position: absolute
+		right: 0
+		top: 0	
+		width: 30px
+		height: 30px
+		cursor: pointer
+		img
+			width: 12px
+
+	&__triangle
+		position: absolute
+		right: -1.5px
+		top: -20px
+		border: 10px solid transparent
+		border-right: 10px solid #bdbcbc
+		border-bottom: 10px solid #bdbcbc
+		&::before
+			content: ''
+			position: absolute
+			right: -8px
+			top: -6px
+			border: 8px solid transparent
+			border-right: 8px solid #131313
+			border-bottom: 8px solid #131313
+// modal-request -- end
+
+// filter -- start 	 			
+.filter
+	display: block
+	width: 190px
+	&__content
+		background-color: $text-black
+		position: fixed
+		height: 100%
+		width: 190px
+		padding: .93rem
+	&__title
+		text-align: center
+		font-size: 17px
+		margin-bottom: 8px
+	&__block
+		&-title
+			margin: 
+				right: 5px
+		&-input
+			width: 100%	
+			border: 0
+			border-radius: 50px
+			background-color: #000
+			color: $text-white
+			padding: 
+				left: 8px
+				right: 8px
+			text-align: center
+			-moz-appearance: textfield
+			&::-webkit-outer-spin-button,
+			&::-webkit-inner-spin-button
+				-webkit-appearance: none
+	&__close
+		position: absolute
+		right: 0
+		top: 0
+		width: 30px
+		height: 30px
+		display: none
+		align-items: center
+		justify-content: center	
+		cursor: pointer		
+// filter -- end
+
+.vendor-code
+	color: $text-dark_gray
+	margin-bottom: 10px
+
+.price
+	color: $text-green
+	font-family: 'Prototype', sans-serif
+
+// products -- start	
+.products
+	&__title
+		color: $text-dark_gray
+		text-transform: uppercase
+		font-family: 'Prototype', sans-serif
+		font-size: 1.5rem
+	&__wrap
+		padding: 10px
+		box-shadow: 0 0 2px 0 $text-green
+		border-radius: 10px
+		background-color: #000000
+		border: solid 1px #000000
+		transition: 0.3s
+		&:hover
+			box-shadow: 0 0 4px 0 $text-green
+			border: solid 1px $text-green
+			transition: 0.3s
+	&__card
+		color: $text-white
+		display: flex
+		flex-direction: column
+		height: 100%
+		text-decoration: none !important
+		color: $text-white !important
+	&__image
+		height: 130px
+		margin-bottom: 10px
+		text-align: center
+		img
+			max-height: 100%
+	&__name
+		font-family: 'Prototype', sans-serif
+		font-size: 17px
+		margin-bottom: 0px
+	&__specifications
+		font-size: 14px
+		font-family: 'Prototype', sans-serif
+		margin-bottom: 7px	
+	&__price
+		font-family: 'Prototype', sans-serif
+		font-size: 14px	
+	&__padding
+		padding-left: 1rem
+		padding-right: 1rem	
+// products -- end
+
+// product-page -- start					
+.product-page
+	padding: 10px 0
+	height: calc(100vh - 4.5rem)!important
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	&__back
+		background-color: transparent
+		border: 0
+		color: $text-dark_gray
+		font-family: 'Prototype', sans-serif
+		font-size: 13px
+		&::before
+			content: ''
+			background-image: url(../img/svg/left-arrow.svg)
+			background-position: center
+			background-size: contain
+			background-repeat: no-repeat
+			display: inline-block
+			width: 15px
+			height: 14px
+		& span::after
+			content: ""
+			width: 100%
+			left: 0
+			bottom: 0
+			opacity: 0
+			height: 1.3px
+			background-color: $text-dark_gray
+			position: absolute
+			transition: 0.3s	
+		&:hover	
+			& span::after
+				opacity: 1
+	&__title
+		font-family: 'Prototype', sans-serif
+		font-size: 2rem
+	&__specifications
+		font-family: 'Prototype', sans-serif
+		font-size: 18px
+	&__item-action
+		background-color: transparent
+		font-family: 'Prototype', sans-serif
+		font-size: 14px
+		padding: 8px 15px
+		border: 0
+		border-radius: 0
+		margin-top: 5px !important
+		margin-bottom: 5px
+		text-align: end
+		color: $text-green
+		outline: none
+		border-top-left-radius: 50px !important
+		border-bottom-left-radius: 50px !important
+		transition: 0.5s
+		&:hover, &:active, &:focus, &.active
+			background-color: $text-green
+			color: $text-white
+			border-top-left-radius: 50px
+			border-bottom-left-radius: 50px
+	&__tab-content
+		overflow-x: hidden
+		height: calc(100vh - 14rem)
+		// height: calc(100vh - 9.6rem)
+		&::-webkit-scrollbar 
+			width: 2px
+			height: 3px
+		&::-webkit-scrollbar-track-piece
+			background-color: rgba(0, 0, 0, 0.95)
+		&::-webkit-scrollbar-thumb 
+			height: 50px
+			background-color: $text-dark_gray
+			border-radius: 10px
+	&__additional-goods
+		position: fixed
+		bottom: -500px 
+		right: 40px
+		z-index: 99
+		width: 500px
+		transition: 0.5s
+		&__button
+			width: max-content
+			margin-left: auto
+			background-color: $text-green
+			border: 0
+			font-family: 'Prototype', sans-serif
+			padding: 8px 25px 8px 25px 
+			font-size: 14px
+			border-top-left-radius: 10px
+			border-top-right-radius: 10px
+			cursor: pointer
+			img
+				margin-left: 10px
+		&.bottom-0 
+			img
+				transform: rotate(180deg)
+		&__content
+			background-color: #000	
+			z-index: 9
+			height: 500px
+			overflow-y: auto
+			border-top-left-radius: 10px
+			border: 1px solid $text-gray
+			&::-webkit-scrollbar 
+				width: 2px
+				height: 3px
+			&::-webkit-scrollbar-track-piece
+				background-color: rgba(0, 0, 0, 0.95)
+			&::-webkit-scrollbar-thumb 
+				height: 50px
+				background-color: $text-dark_gray
+				border-radius: 10px
+		&__wrap
+			padding: 10px
+			box-shadow: 0 0 2px 0 $text-green
+			border-radius: 10px
+			background-color: #000000
+			border: solid 1px #000000
+			&:hover
+				box-shadow: 0 0 4px 0 $text-green
+				border: solid 1px $text-green
+		&__card
+			color: $text-white
+			display: flex
+			flex-direction: column
+			height: 100%
+			text-decoration: none !important
+			color: $text-white !important	
+		&__image
+			height: 115px
+			margin-bottom: 10px
+			text-align: center
+			img
+				max-height: 100%		
+		&__name
+			font-size: 14px
+			font-family: 'Prototype', sans-serif
+		&__specifications
+			font-size: 12px
+			font-family: 'Prototype', sans-serif
+		&__price
+			font-size: 12px
+			font-family: 'Prototype', sans-serif	
+	&__file-link
+		margin: 15px 0
+		&__image
+			margin-right: 7px
+			img
+				min-width: 20px
+		&__name
+			color: $text-gray
+			text-decoration: underline
+			text-decoration-skip-ink: none
+	&__price
+		font-family: 'Prototype', sans-serif
+		font-size: 24px
+		text-align: end
+	&__slider
+		&-image
+			height: 400px
+			width: 100%
+			background-position: center
+			background-repeat: no-repeat
+			background-size: contain
+		.lSPager.lSGallery
+			width: 100% !important
+			display: flex
+			justify-content: space-between
+			li
+				width: 100px !important
+				border: solid 1px transparent
+				padding: 5px
+				margin: 5px
+				border-radius: 10px !important
+				transition: 0.3s
+				&:hover
+					box-shadow: 0 0 4px 0 #76b729
+				    transition: 0.3s
+				&.active
+					box-shadow: 0 0 4px 0 $text-green
+					border: solid 1px $text-green
+		.lSSlideWrapper
+			overflow: visible	
+		.lSAction>.lSPrev
+			top: 110%
+			background-image: url('../img/svg/slider-arrow-left.svg')
+			background-repeat: no-repeat
+			background-position: center
+			background-size: contain
+			height: 50px
+			opacity: .8
+		.lSAction>.lSNext
+			top: 110%
+			background-image: url('../img/svg/slider-arrow-right.svg')
+			background-repeat: no-repeat
+			background-position: center
+			background-size: contain
+			height: 50px
+			opacity: .7
+// product-page -- end
+
+// style-form -- start
+.style-form 
+	display: flex
+	&__label
+		font-family: 'Prototype', sans-serif
+		padding: 0 10px
+	&__input
+		border: 0
+		border-radius: 0
+		background-color: rgba(255, 255, 255, 0.0)
+		border-bottom: 1.1px solid $text-dark_gray
+		padding: 0
+		height: 20px 
+		font-family: 'Prototype', sans-serif
+		width: auto
+		-webkit-text-fill-color: $text-dark_gray
+		&:hover, &:focus
+			box-shadow: none
+			border-color: $text-dark_gray
+			background-color: rgba(255, 255, 255, 0.0)
+			-webkit-text-fill-color: $text-dark_gray
+		&:-webkit-autofill, &:hover, &:focus
+				border: 0
+				border-bottom: 1.1px solid $text-dark_gray !important
+				-webkit-text-fill-color: $text-dark_gray !important
+				background-color: transparent !important
+				-webkit-box-shadow: 0 0 0px 1000px $text-black inset !important
+				transition: background-color 5000s ease-in-out 0s
+// style-form -- end
+
+// contacts -- start
+.contacts
+	&__title
+		font-family: 'Prototype', sans-serif
+		font-size: 16px
+	&__wrap
+		background-color: $text-black
+		padding: 30px 20px
+		text-align: center
+		border-radius: 22px
+		border: 1px solid transparent
+		transition: 0.3s
+		&:hover
+			border-color: $text-green
+			transition: 0.3s
+	&__button-dropdown
+		border: 0
+		background-color: transparent
+		color: $text-green
+		font-family: 'Prototype', sans-serif
+		text-decoration: underline
+		padding: 0
+	&__menu-dropdown
+		background-color: $text-white
+		padding: 10px
+		font-family: 'Prototype', sans-serif
+		color: $text-black
+		border-radius: 4px	
+		position: absolute
+		top: 29px
+		z-index: 9
+		width: 155px
+		display: none
+		&__label
+			margin: 0
+			display: block
+			padding: 3px 0
+			cursor: pointer
+			outline: none
+			user-select: none			
+			&-title
+				text-decoration: underline			
+			input
+				position: absolute
+				z-index: -1
+				opacity: 0
+			&-checkbox
+				position: relative
+				display: inline-block
+				width: 1em
+				height: 1em
+				flex-shrink: 0
+				flex-grow: 0
+				border: 1px solid $text-black
+				background-repeat: no-repeat
+				background-position: center center
+				background-size: 50% 50%			
+			input:checked ~ 
+				.contacts__menu-dropdown__label-checkbox::before
+					content: ""
+					position: absolute
+					left: 4.7px
+					top: 0px
+					width: 6px
+					height: 10px
+					border: solid $text-green
+					border-width: 0 1.6px 1.6px 0
+					-webkit-transform: rotate(45deg)
+					-ms-transform: rotate(45deg)
+					transform: rotate(45deg)
+				.contacts__menu-dropdown__label-title
+					color: $text-green
+// contacts -- end
+
+
+.slider-vertical
+	&__control
+		font-family: 'Prototype', sans-serif
+		font-size: 13px
+	&__arrow
+		background-image: url(../img/svg/up-arrow.svg)
+		background-position: center
+		background-repeat: no-repeat
+		background-size: contain
+		height: 20px
+		width: 50px
+		cursor: pointer
+		margin: 4px 0
+		&:hover
+			background-image: url(../img/svg/up-arrow-hover.svg)
+	.lSPager.lSpg
+		display: none	
+	.lSPrev
+		display: none
+	.lSNext
+		display: none
+
+
+.arrow-to-down
+	transform: rotate(180deg)
+
+
+.slider-block
+	height: calc(100vh - 9rem) !important
+	&__slide
+		position: relative
+		padding: 20px 20px 0 20px
+		height: calc(100vh - 9rem) !important
+		outline: 0 !important
+	&__bi
+		background-position: 200px center
+		background-repeat: no-repeat
+		background-size: cover
+		position: absolute
+		height: 100%
+		width: 100%
+		top: 0
+		left: 0
+		opacity: 0.05
+		z-index: -9
+
+.lg-toolbar .lg-close:after
+	content: ''
+	background-image: url('../img/svg/cross.svg')
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	width: 15px
+	height: 15px
+	display: block
+
+.lg-toolbar .lg-download:after
+	content: ''
+	background-image: url('../img/svg/download-icon.svg')
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	width: 15px
+	height: 15px
+	display: block
+
+.lg-actions .lg-next:before
+	content: ''
+	background-image: url('../img/svg/slider-arrow-right.svg')
+	background-position: center
+	background-repeat: no-repeat
+	background-size: contain
+	width: 40px
+	height: 50px
+	display: block
+
+.lg-actions .lg-prev:after
+	content: ''
+	background-image: url('../img/svg/slider-arrow-left.svg')
+	background-position: center
+	background-repeat: no-repeat
+	background-size: contain
+	width: 40px
+	height: 50px
+	display: block
+
+.lg-toolbar .lg-icon
+	display: flex
+	align-items: center
