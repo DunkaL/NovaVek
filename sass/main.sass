@@ -263,7 +263,7 @@ a, a:hover
 	height: 60px
 	display: flex
 	&__logo
-		width: 180px
+		width: 175px
 		padding-right: 1rem
 	&__nav>.nav-item>.nav-link
 			padding: 1.1rem 0.8rem
@@ -502,14 +502,12 @@ a, a:hover
 
 // filter -- start 	 			
 .filter
-	display: block
 	width: 190px
-	&__content
-		background-color: $text-black
-		position: fixed
-		height: 100%
-		width: 190px
-		padding: .93rem
+	background-color: $text-black
+	position: sticky
+	top: 0
+	height: calc(100vh - 3.6rem)
+	padding: .93rem
 	&__title
 		text-align: center
 		font-size: 17px
