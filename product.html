@@ -228,27 +228,6 @@
 									<button class="button button--drenched button__icon-phone d-flex header__button-phone" id="button-dropdown-phone"> 
 										<span>заказать звонок</span>	
 									</button>
-									<div class="modal-request-a-call d-none" id="block-dropdown-phone">
-										<div class="modal-request-a-call__content">
-											<div class="modal-request-a-call__triangle"></div>
-											<div class="modal-request-a-call__close d-flex justify-content-center align-items-center">
-												<img src="img/svg/cross.svg" alt="cross-icon">
-											</div>
-											<form>
-												<div class="form-group style-form">
-													<label for="name" class="style-form__label">Имя</label>
-													<input id="name" type="name" class="form-control style-form__input" name="name" placeholder="ваше имя">
-												</div>
-												<div class="form-group style-form">
-													<label for="phone" class="style-form__label">Телефон</label>
-													<input id="phone" type="phone" class="form-control style-form__input" name="phone"  placeholder="+7 …">
-												</div>
-												<div class="text-center">
-													<button class="button button--drenched w-50">отправить</button>
-												</div>
-											</form>
-										</div>	
-									</div>
 								</div>
 							</div>
 							<button class="burger ml-auto" type="button" id="navToggle">
@@ -261,13 +240,13 @@
 				<main class="col p-0 content" id="content">
 					<div class="row m-0 product-page"
 						style="background-image: linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.95)),url('img/img1.png')">
-						<div class="col-12">
+						<div class="col-12 pb-3">
 							<button class="product-page__back d-flex align-items-center" onclick="history.back();">
 								<span class="position-relative">Назад</span>
 							</button>
 						</div>
-						<div class="col-6 pr-2">
-							<div class="px-5">
+						<div class="product-page__col-5 px-3">
+							<div class="px-md-5">
 								<h1 class="product-page__title">Светильник «Фасад»</h1>
 								<p class="product-page__specifications">56 Вт, КСС (15°, К 30°, Г 60°)</p>
 							</div>
@@ -292,9 +271,9 @@
 								</ul>
 							</div>
 						</div>
-						<div class="col-6">
+						<div class="col product-page__col-5">
 							<div class="row">
-								<div class="col-7 p-0">
+								<div class="product-page__col-6 col-sm-3">
 									<p class="vendor-code">код товара: 1337</p>
 									<div class="tab-content product-page__tab-content" id="nav-tabContent">
 										<div class="tab-pane fade show active" id="osnovnye-xarakteristiki"
@@ -487,8 +466,8 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-5 pr-0">
-									<div class="list-group" id="list-tab" role="tablist">
+								<div class="product-page__col-4">
+									<div class="pb-3 list-group product-page__col-4-block" id="list-tab" role="tablist">
 										<a class="list-group-item list-group-item-action product-page__item-action active"
 											id="osnovnye-xarakteristiki-list" data-toggle="list"
 											href="#osnovnye-xarakteristiki" role="tab"
@@ -502,8 +481,8 @@
 											href="#texnicheskie-xarakteristiki" role="tab"
 											aria-controls="texnicheskie-xarakteristiki">Технические Характеристики</a>
 									</div>
-									<div class="pt-4">
-										<div class="col-10 ml-auto">
+									<div class="product-page__col-4-block">
+										<div class="col product-page__file">
 											<a href="#" class="product-page__file-link d-flex align-items-center">
 												<div class="product-page__file-link__image">
 													<img src="img/svg/document-icon.svg" alt="document-icon">
@@ -540,9 +519,12 @@
 							<div class="product-page__additional-goods__button d-flex">
 								С этим товаром покупают: <img src="img/svg/up-arrow-white.svg" alt="up-arrow-white">
 							</div>
+							<div class="product-page__additional-goods__title">
+								С этим товаром покупают
+							</div>
 							<div class="product-page__additional-goods__content row m-0 pt-3">
 
-								<div class="col-md-6 pb-3">
+								<div class="col-sm-6 pb-3">
 									<div class="product-page__additional-goods__wrap">
 										<a href="product.html" class="product-page__additional-goods__card">
 											<p class="vendor-code">код товара: 1337</p>
@@ -562,7 +544,7 @@
 									</div>
 								</div>
 
-								<div class="col-md-6 pb-3">
+								<div class="col-sm-6 pb-3">
 									<div class="product-page__additional-goods__wrap">
 										<a href="product.html" class="product-page__additional-goods__card">
 											<p class="vendor-code">код товара: 1337</p>
@@ -582,7 +564,7 @@
 									</div>
 								</div>
 
-								<div class="col-md-6 pb-3">
+								<div class="col-sm-6 pb-3">
 									<div class="product-page__additional-goods__wrap">
 										<a href="product.html" class="product-page__additional-goods__card">
 											<p class="vendor-code">код товара: 1337</p>
@@ -602,7 +584,7 @@
 									</div>
 								</div>
 
-								<div class="col-md-6 pb-3">
+								<div class="col-sm-6 pb-3">
 									<div class="product-page__additional-goods__wrap">
 										<a href="product.html" class="product-page__additional-goods__card">
 											<p class="vendor-code">код товара: 1337</p>
@@ -626,6 +608,27 @@
 						</div>
 					</div>
 				</main>
+
+				<div class="modal-request-a-call d-none" id="block-dropdown-phone">
+					<div class="modal-request-a-call__content">
+						<div class="modal-request-a-call__close d-flex justify-content-center align-items-center">
+							<img src="img/svg/cross.svg" alt="cross-icon">
+						</div>
+						<form>
+							<div class="form-group style-form">
+								<label for="name" class="style-form__label">Имя</label>
+								<input id="name" type="name" class="form-control style-form__input" name="name" placeholder="ваше имя">
+							</div>
+							<div class="form-group style-form">
+								<label for="phone" class="style-form__label">Телефон</label>
+								<input id="phone" type="phone" class="form-control style-form__input" name="phone"  placeholder="+7 …">
+							</div>
+							<div class="text-center">
+								<button class="button button--drenched w-sm-50">отправить</button>
+							</div>
+						</form>
+					</div>	
+				</div>	
 			</div>
 		</div>
 	</div>

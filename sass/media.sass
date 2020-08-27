@@ -4,7 +4,21 @@
     .header
         &__block
             justify-content: flex-end !important
-            width: auto  
+            width: auto 
+    .product-page
+        &__file
+            margin-left: 0
+            width: 100%
+        &__col-6
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+            max-width: 50%;	
+        &__col-4
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+            max-width: 50%;	            
 
 @media(max-width: 1400px)
     .header
@@ -17,6 +31,12 @@
             padding-right: 10px
         &__specifications   
             font-size: 12px 
+    .product-page
+        &__slider
+            .lSAction>.lSNext
+                top: 50%
+            .lSAction>.lSPrev
+                top: 50%      
 
 @media screen and(max-width: 1260px)
     .products
@@ -35,6 +55,60 @@
         transition: 0.3s
         &__close
             display: flex
+    .product-page
+        flex-direction: column
+        background-image: none !important  
+        &__slider
+            .lSPager.lSGallery
+                display: none   
+        &__col-6
+            -webkit-box-flex: 0
+            -ms-flex: 0 0 100%
+            flex: 0 0 100%
+            max-width: 100%  
+        &__col-5
+            -webkit-box-flex: 0
+            -ms-flex: 0 0 100%
+            flex: 0 0 100%
+            max-width: 100%  
+        &__col-4
+            order: -1
+            -webkit-box-flex: 0
+            -ms-flex: 0 0 100%
+            flex: 0 0 100%
+            max-width: 100% 
+            display: flex
+            &-block
+                -webkit-box-flex: 0
+                -ms-flex: 0 0 50%
+                flex: 0 0 50%
+                max-width: 50%
+        &__item-action
+            text-align: left   
+            border-top-left-radius: 0 !important
+            border-bottom-left-radius: 0 !important
+            border-top-right-radius: 50px !important
+            border-bottom-right-radius: 50px !important
+        &__file
+            display: none
+        &__tab-content
+            height: 100% 
+            padding-bottom: 20px
+        &__additional-goods
+            position: initial
+            width: 100%
+            padding-bottom: 30px
+            &__content
+                height: auto
+                border: 0
+                padding: 0 10px
+            &__button
+                display: none !important 
+            &__title
+                display: block  
+                padding: 0 20px     
+        &__item-action
+            width: max-content         
 
 @media screen and (max-width: 1200px) and (min-width: 1010px)
     .header
@@ -45,7 +119,10 @@
                 font-size: 0
                 width: 0
             &::before
-                margin-right: 0  
+                margin-right: 0
+    .modal-request-a-call
+        &__content
+            right: 36px
 
 @media screen and(max-width: 1010px)
     .header
@@ -69,7 +146,6 @@
                 padding: 0.6rem
             &-sub
                 position: inherit
-                display: none
         &__block
             flex-direction: column  
             padding: 10px
@@ -97,7 +173,24 @@
             color: $text-white    
     .button
         &__filter
-            display: block
+            display: block       
+    .modal-request-a-call
+        position: fixed
+        z-index: 999
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        overflow: auto
+        background-color: rgba(0,0,0,0.58)
+        &__content
+            border-top-right-radius: 5px
+            position: relative
+            right: 0
+            margin: 0 auto
+            &:before,
+            &:after
+                display: none     
 
 @media screen and(max-width: 500px)
     .header
@@ -150,4 +243,34 @@
             padding-right: 30px    
     .search
         &__input
-            width: 180px             
+            width: 180px  
+    .product-page
+        &__col-4
+            display: block
+            &-block
+                -webkit-box-flex: 0
+                -ms-flex: 0 0 100%
+                flex: 0 0 100%
+                max-width: 100%
+        &__item-action
+            width: max-content
+        &__price
+            text-align: start
+            padding-bottom: 20px
+        &__title
+            font-size: 25px  
+
+@media screen and (max-width: 370px)
+    .modal-request-a-call
+        &__content
+            width: 280px            
+    .style-form
+        display: block
+        &__label
+            padding: 0
+        &__input
+            width: 100%
+
+@media screen and (max-width: 300px)
+    .content
+        height: 100vh !important                        

@@ -461,18 +461,37 @@ a, a:hover
 
 // modal-request -- start 	 			
 .modal-request-a-call
-	position: absolute	
-	top: 77px
-	z-index: 999
-	right: 100px
-	background-color: $text-black
-	border: 1.2px solid $text-gray
-	width: 340px	
-	border-radius: 5px
-	border-top-right-radius: 0
 	&__content
-		position: relative	
+		position: fixed
 		padding: 35px 25px 25px 25px
+		top: 69px
+		z-index: 999
+		right: 100px
+		background-color: $text-black
+		border: 1.2px solid $text-gray
+		width: 340px	
+		border-radius: 5px
+		border-top-right-radius: 0
+		&:after,
+		&:before
+			content: "" 
+			border: solid transparent
+			position: absolute
+			bottom: 100%
+			right: 1px
+		&:after
+			border-bottom-color: $text-black
+			border-width: 8px
+			margin-right: -0.5px
+			margin-bottom: -1px
+			border-right: 8px solid $text-black
+			border-bottom: 8px solid $text-black
+		&:before
+			border-bottom-color: $text-gray
+			border-width: 9px
+			margin-right: -2px
+			border-right: 9px solid $text-gray
+			border-bottom: 9px solid $text-gray
 	&__close
 		position: absolute
 		right: 0
@@ -482,22 +501,6 @@ a, a:hover
 		cursor: pointer
 		img
 			width: 12px
-
-	&__triangle
-		position: absolute
-		right: -1.5px
-		top: -20px
-		border: 10px solid transparent
-		border-right: 10px solid #bdbcbc
-		border-bottom: 10px solid #bdbcbc
-		&::before
-			content: ''
-			position: absolute
-			right: -8px
-			top: -6px
-			border: 8px solid transparent
-			border-right: 8px solid #131313
-			border-bottom: 8px solid #131313
 // modal-request -- end
 
 // filter -- start 	 			
@@ -600,7 +603,6 @@ a, a:hover
 // product-page -- start					
 .product-page
 	padding: 10px 0
-	height: calc(100vh - 4.5rem)!important
 	background-position: center
 	background-repeat: no-repeat
 	background-size: cover
@@ -740,17 +742,22 @@ a, a:hover
 			font-family: 'Prototype', sans-serif
 		&__price
 			font-size: 12px
-			font-family: 'Prototype', sans-serif	
-	&__file-link
-		margin: 15px 0
-		&__image
-			margin-right: 7px
-			img
-				min-width: 20px
-		&__name
-			color: $text-gray
-			text-decoration: underline
-			text-decoration-skip-ink: none
+			font-family: 'Prototype', sans-serif
+		&__title
+			display: none		
+	&__file
+		width: 220px
+		margin-left: auto
+		&-link
+			margin: 15px 0
+			&__image
+				margin-right: 7px
+				img
+					min-width: 20px
+			&__name
+				color: $text-gray
+				text-decoration: underline
+				text-decoration-skip-ink: none
 	&__price
 		font-family: 'Prototype', sans-serif
 		font-size: 24px
@@ -778,7 +785,7 @@ a, a:hover
 				    transition: 0.3s
 				&.active
 					box-shadow: 0 0 4px 0 $text-green
-					border: solid 1px $text-green
+					border: solid 1px $text-green				
 		.lSSlideWrapper
 			overflow: visible	
 		.lSAction>.lSPrev
@@ -789,6 +796,8 @@ a, a:hover
 			background-size: contain
 			height: 50px
 			opacity: .8
+			z-index: 9
+
 		.lSAction>.lSNext
 			top: 110%
 			background-image: url('../img/svg/slider-arrow-right.svg')
@@ -796,7 +805,24 @@ a, a:hover
 			background-position: center
 			background-size: contain
 			height: 50px
-			opacity: .7
+			opacity: .8
+			z-index: 9
+	&__col-6
+		-webkit-box-flex: 0
+		-ms-flex: 0 0 60%
+		flex: 0 0 60%
+		max-width: 60%
+	&__col-5
+		-webkit-box-flex: 0
+		-ms-flex: 0 0 50%
+		flex: 0 0 50%
+		max-width: 50%
+	&__col-4
+		-webkit-box-flex: 0
+		-ms-flex: 0 0 40%
+		flex: 0 0 40%
+		max-width: 40%	
+
 // product-page -- end
 
 // style-form -- start

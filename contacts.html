@@ -228,27 +228,6 @@
 									<button class="button button--drenched button__icon-phone d-flex header__button-phone" id="button-dropdown-phone"> 
 										<span>заказать звонок</span>	
 									</button>
-									<div class="modal-request-a-call d-none" id="block-dropdown-phone">
-										<div class="modal-request-a-call__content">
-											<div class="modal-request-a-call__triangle"></div>
-											<div class="modal-request-a-call__close d-flex justify-content-center align-items-center">
-												<img src="img/svg/cross.svg" alt="cross-icon">
-											</div>
-											<form>
-												<div class="form-group style-form">
-													<label for="name" class="style-form__label">Имя</label>
-													<input id="name" type="name" class="form-control style-form__input" name="name" placeholder="ваше имя">
-												</div>
-												<div class="form-group style-form">
-													<label for="phone" class="style-form__label">Телефон</label>
-													<input id="phone" type="phone" class="form-control style-form__input" name="phone"  placeholder="+7 …">
-												</div>
-												<div class="text-center">
-													<button class="button button--drenched w-50">отправить</button>
-												</div>
-											</form>
-										</div>	
-									</div>
 								</div>
 							</div>
 							<button class="burger ml-auto" type="button" id="navToggle">
@@ -453,6 +432,27 @@
 					</div>
 
 				</main>
+
+				<div class="modal-request-a-call d-none" id="block-dropdown-phone">
+					<div class="modal-request-a-call__content">
+						<div class="modal-request-a-call__close d-flex justify-content-center align-items-center">
+							<img src="img/svg/cross.svg" alt="cross-icon">
+						</div>
+						<form>
+							<div class="form-group style-form">
+								<label for="name" class="style-form__label">Имя</label>
+								<input id="name" type="name" class="form-control style-form__input" name="name" placeholder="ваше имя">
+							</div>
+							<div class="form-group style-form">
+								<label for="phone" class="style-form__label">Телефон</label>
+								<input id="phone" type="phone" class="form-control style-form__input" name="phone"  placeholder="+7 …">
+							</div>
+							<div class="text-center">
+								<button class="button button--drenched w-sm-50">отправить</button>
+							</div>
+						</form>
+					</div>	
+				</div>	
 			</div>
 		</div>
 	</div>
