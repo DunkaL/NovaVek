@@ -220,8 +220,8 @@
 								</nav>
 								<div class="ml-auto header__block">
 									<form class="search">
-										<input type="text" class="search__input" placeholder="Поиск по коду товара...">
-										<button class='search__button'>
+										<input name="search" type="text" class="search__input" placeholder="Поиск по коду товара...">
+										<button type="submit" class='search__button'>
 											<img src="img/svg/search.svg" alt="icon-search" class="search__button-icon">
 										</button>
 									</form>
@@ -238,8 +238,8 @@
 				</header>
 
 				<main class="col p-0 content" id="content">
-					<div class="row m-0 product-page"
-						style="background-image: linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.95)),url('img/img1.png')">
+					<div class="row m-0 product-page">
+						<div class="product-page__bi" style="background-image: linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.95)),url('img/img1.png')"></div>
 						<div class="col-12 pb-3">
 							<button class="product-page__back d-flex align-items-center" onclick="history.back();">
 								<span class="position-relative">Назад</span>
@@ -251,24 +251,46 @@
 								<p class="product-page__specifications">56 Вт, КСС (15°, К 30°, Г 60°)</p>
 							</div>
 							<div class="product-page__slider">
-								<ul id="imageGallery">
-									<li data-thumb="img/img1.png" data-src="img/img1.png">
-										<div class="product-page__slider-image"
-											style="background-image: url('img/img1.png')"></div>
+								<div id="imageGallery"> 
+									<li data-src="img/img1.png">
+										<div class="product-page__slider-image" style="background-image: url('img/img1.png')"></div>
 									</li>
-									<li data-thumb="img/img2.png" data-src="img/img2.png">
-										<div class="product-page__slider-image"
-											style="background-image: url('img/img2.png')"></div>
+									<li data-src="img/img2.png">
+										<div class="product-page__slider-image" style="background-image: url('img/img2.png')"></div>
 									</li>
-									<li data-thumb="img/img3.png" data-src="img/img3.png">
-										<div class="product-page__slider-image"
-											style="background-image: url('img/img3.png')"></div>
+									<li data-src="img/img3.png">
+										<div class="product-page__slider-image" style="background-image: url('img/img3.png')"></div>
 									</li>
-									<li data-thumb="img/img4.png" data-src="img/img4.png">
-										<div class="product-page__slider-image"
-											style="background-image: url('img/img4.png')"></div>
+									<li data-src="img/img4.png">
+										<div class="product-page__slider-image" style="background-image: url('img/img4.png')"></div>
 									</li>
-								</ul>
+									<li data-src="img/img4.png">
+										<div class="product-page__slider-image" style="background-image: url('img/img4.png')"></div>
+									</li>
+									<li data-src="img/img4.png">
+										<div class="product-page__slider-image" style="background-image: url('img/img4.png')"></div>
+									</li>
+								</div>
+								<div id="imageGallery-nav" class="d-flex align-center">
+									<div class="item">
+										<img class="item-img" src="img/img1.png">
+									</div>													
+									<div class="item">
+										<img class="item-img" src="img/img2.png">
+									</div>
+									<div class="item">
+										<img class="item-img" src="img/img3.png">
+									</div>
+									<div class="item">
+										<img class="item-img" src="img/img4.png">
+									</div>
+									<div class="item">
+										<img class="item-img" src="img/img4.png">
+									</div>
+									<div class="item">
+										<img class="item-img" src="img/img4.png">
+									</div>
+								</div>
 							</div>
 						</div>
 						<div class="col product-page__col-5">
@@ -479,7 +501,7 @@
 										<a class="list-group-item list-group-item-action product-page__item-action"
 											id="texnicheskie-xarakteristiki-list" data-toggle="list"
 											href="#texnicheskie-xarakteristiki" role="tab"
-											aria-controls="texnicheskie-xarakteristiki">Технические Характеристики</a>
+											aria-controls="texnicheskie-xarakteristiki">ТЕХНИЧЕСКИЕ ХАРАКТЕРИСТИКИ</a>
 									</div>
 									<div class="product-page__col-4-block">
 										<div class="col product-page__file">
@@ -516,94 +538,94 @@
 							</div>
 						</div>
 						<div class="product-page__additional-goods">
-							<div class="product-page__additional-goods__button d-flex">
-								С этим товаром покупают: <img src="img/svg/up-arrow-white.svg" alt="up-arrow-white">
+							<div class="product-page__additional-goods__button">
+								С этим товаром покупают: 
 							</div>
 							<div class="product-page__additional-goods__title">
 								С этим товаром покупают
 							</div>
-							<div class="product-page__additional-goods__content row m-0 pt-3">
+							<div class="product-page__additional-goods__content pt-3">
+								<div class="row m-0">
+									<div class="col-sm-6 pb-3 px-2">
+										<div class="product-page__additional-goods__wrap">
+											<a href="product.html" class="product-page__additional-goods__card">
+												<p class="vendor-code">код товара: 1337</p>
+												<div class="product-page__additional-goods__image">
+													<img src="img/img1.png"
+														alt="Светильник «Фасад» 56 Вт, КСС (15°, К 30°, Г 60°)">
+												</div>
+												<h4 class="product-page__additional-goods__name">Светильник «Фасад» </h4>
+												<p class="product-page__additional-goods__specifications">56 Вт, КСС (15°, К
+													30°, Г 60°)</p>
+												<div
+													class="product-page__additional-goods__price d-flex justify-content-between">
+													<div>8 120 Люмен</div>
+													<div class="price">50 000 ₽</div>
+												</div>
+											</a>
+										</div>
+									</div>
 
-								<div class="col-sm-6 pb-3">
-									<div class="product-page__additional-goods__wrap">
-										<a href="product.html" class="product-page__additional-goods__card">
-											<p class="vendor-code">код товара: 1337</p>
-											<div class="product-page__additional-goods__image">
-												<img src="img/img1.png"
-													alt="Светильник «Фасад» 56 Вт, КСС (15°, К 30°, Г 60°)">
-											</div>
-											<h4 class="product-page__additional-goods__name">Светильник «Фасад» </h4>
-											<p class="product-page__additional-goods__specifications">56 Вт, КСС (15°, К
-												30°, Г 60°)</p>
-											<div
-												class="product-page__additional-goods__price d-flex justify-content-between">
-												<div>8 120 Люмен</div>
-												<div class="price">50 000 ₽</div>
-											</div>
-										</a>
+									<div class="col-sm-6 pb-3 px-2">
+										<div class="product-page__additional-goods__wrap">
+											<a href="product.html" class="product-page__additional-goods__card">
+												<p class="vendor-code">код товара: 1337</p>
+												<div class="product-page__additional-goods__image">
+													<img src="img/img1.png"
+														alt="Светильник «Фасад» 56 Вт, КСС (15°, К 30°, Г 60°)">
+												</div>
+												<h4 class="product-page__additional-goods__name">Светильник «Фасад» </h4>
+												<p class="product-page__additional-goods__specifications">56 Вт, КСС (15°, К
+													30°, Г 60°)</p>
+												<div
+													class="product-page__additional-goods__price d-flex justify-content-between">
+													<div>8 120 Люмен</div>
+													<div class="price">50 000 ₽</div>
+												</div>
+											</a>
+										</div>
+									</div>
+
+									<div class="col-sm-6 pb-3 px-2">
+										<div class="product-page__additional-goods__wrap">
+											<a href="product.html" class="product-page__additional-goods__card">
+												<p class="vendor-code">код товара: 1337</p>
+												<div class="product-page__additional-goods__image">
+													<img src="img/img1.png"
+														alt="Светильник «Фасад» 56 Вт, КСС (15°, К 30°, Г 60°)">
+												</div>
+												<h4 class="product-page__additional-goods__name">Светильник «Фасад» </h4>
+												<p class="product-page__additional-goods__specifications">56 Вт, КСС (15°, К
+													30°, Г 60°)</p>
+												<div
+													class="product-page__additional-goods__price d-flex justify-content-between">
+													<div>8 120 Люмен</div>
+													<div class="price">50 000 ₽</div>
+												</div>
+											</a>
+										</div>
+									</div>
+
+									<div class="col-sm-6 pb-3 px-2">
+										<div class="product-page__additional-goods__wrap">
+											<a href="product.html" class="product-page__additional-goods__card">
+												<p class="vendor-code">код товара: 1337</p>
+												<div class="product-page__additional-goods__image">
+													<img src="img/img1.png"
+														alt="Светильник «Фасад» 56 Вт, КСС (15°, К 30°, Г 60°)">
+												</div>
+												<h4 class="product-page__additional-goods__name">Светильник «Фасад» </h4>
+												<p class="product-page__additional-goods__specifications">56 Вт, КСС (15°, К
+													30°, Г 60°)</p>
+												<div
+													class="product-page__additional-goods__price d-flex justify-content-between">
+													<div>8 120 Люмен</div>
+													<div class="price">50 000 ₽</div>
+												</div>
+											</a>
+										</div>
 									</div>
 								</div>
-
-								<div class="col-sm-6 pb-3">
-									<div class="product-page__additional-goods__wrap">
-										<a href="product.html" class="product-page__additional-goods__card">
-											<p class="vendor-code">код товара: 1337</p>
-											<div class="product-page__additional-goods__image">
-												<img src="img/img1.png"
-													alt="Светильник «Фасад» 56 Вт, КСС (15°, К 30°, Г 60°)">
-											</div>
-											<h4 class="product-page__additional-goods__name">Светильник «Фасад» </h4>
-											<p class="product-page__additional-goods__specifications">56 Вт, КСС (15°, К
-												30°, Г 60°)</p>
-											<div
-												class="product-page__additional-goods__price d-flex justify-content-between">
-												<div>8 120 Люмен</div>
-												<div class="price">50 000 ₽</div>
-											</div>
-										</a>
-									</div>
-								</div>
-
-								<div class="col-sm-6 pb-3">
-									<div class="product-page__additional-goods__wrap">
-										<a href="product.html" class="product-page__additional-goods__card">
-											<p class="vendor-code">код товара: 1337</p>
-											<div class="product-page__additional-goods__image">
-												<img src="img/img1.png"
-													alt="Светильник «Фасад» 56 Вт, КСС (15°, К 30°, Г 60°)">
-											</div>
-											<h4 class="product-page__additional-goods__name">Светильник «Фасад» </h4>
-											<p class="product-page__additional-goods__specifications">56 Вт, КСС (15°, К
-												30°, Г 60°)</p>
-											<div
-												class="product-page__additional-goods__price d-flex justify-content-between">
-												<div>8 120 Люмен</div>
-												<div class="price">50 000 ₽</div>
-											</div>
-										</a>
-									</div>
-								</div>
-
-								<div class="col-sm-6 pb-3">
-									<div class="product-page__additional-goods__wrap">
-										<a href="product.html" class="product-page__additional-goods__card">
-											<p class="vendor-code">код товара: 1337</p>
-											<div class="product-page__additional-goods__image">
-												<img src="img/img1.png"
-													alt="Светильник «Фасад» 56 Вт, КСС (15°, К 30°, Г 60°)">
-											</div>
-											<h4 class="product-page__additional-goods__name">Светильник «Фасад» </h4>
-											<p class="product-page__additional-goods__specifications">56 Вт, КСС (15°, К
-												30°, Г 60°)</p>
-											<div
-												class="product-page__additional-goods__price d-flex justify-content-between">
-												<div>8 120 Люмен</div>
-												<div class="price">50 000 ₽</div>
-											</div>
-										</a>
-									</div>
-								</div>
-
 							</div>
 						</div>
 					</div>
@@ -627,8 +649,10 @@
 								<button class="button button--drenched w-sm-50">отправить</button>
 							</div>
 						</form>
+						<span class="modal-request-a-call__triangle"></span>
 					</div>	
-				</div>	
+				</div>		
+
 			</div>
 		</div>
 	</div>

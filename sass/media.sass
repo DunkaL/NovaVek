@@ -6,9 +6,6 @@
             justify-content: flex-end !important
             width: auto 
     .product-page
-        &__file
-            margin-left: 0
-            width: 100%
         &__col-6
             -webkit-box-flex: 0;
             -ms-flex: 0 0 50%;
@@ -18,7 +15,7 @@
             -webkit-box-flex: 0;
             -ms-flex: 0 0 50%;
             flex: 0 0 50%;
-            max-width: 50%;	            
+            max-width: 50%;	                     
 
 @media(max-width: 1400px)
     .header
@@ -32,12 +29,13 @@
         &__specifications   
             font-size: 12px   
     .product-page
+        &__file
+            margin-left: 0
+            width: 100%
         &__slider
-            .lSAction>.lSNext
-                top: 50%
-            .lSAction>.lSPrev
-                top: 50%      
-
+            &-image
+                height: 350px
+   
 @media screen and(max-width: 1260px)
     .products
         &__padding
@@ -57,10 +55,9 @@
             display: flex
     .product-page
         flex-direction: column
-        background-image: none !important  
-        &__slider
-            .lSPager.lSGallery
-                display: none   
+        height: auto
+        &__bi
+            background-image: none !important  
         &__col-6
             -webkit-box-flex: 0
             -ms-flex: 0 0 100%
@@ -108,7 +105,31 @@
                 display: block  
                 padding: 0 20px     
         &__item-action
-            width: max-content         
+            width: max-content 
+    #imageGallery-nav
+        position: initial  
+    #imageGallery-nav .slick-list.draggable
+        display: none 
+    #imageGallery-nav .slick-prev.slick-arrow
+        position: absolute
+        width: 100px
+        height: 100px  
+        left: 0 
+        top: 30%
+    #imageGallery-nav .slick-next.slick-arrow
+        position: absolute
+        width: 100px
+        height: 100px   
+        right: 0
+        top: 30% 
+    .modal-windows
+        &--partner
+            left: calc(0px + 90px)
+
+@media screen and (max-width: 1280px)
+    .slider
+        &-image2
+            left: calc(100vh - 73vh);
 
 @media screen and (max-width: 1200px) and (min-width: 1010px)
     .header
@@ -120,10 +141,13 @@
                 width: 0
             &::before
                 margin-right: 0
-    .modal-request-a-call
-        &__content
+    .modal-windows
             right: 36px
-
+@media screen and (max-width: 1025px)
+    .slider
+        &-image1
+            left: calc(100vh - 70vh)
+        
 @media screen and(max-width: 1010px)
     .header
         &__menu
@@ -169,30 +193,79 @@
             padding-left: 25px            
             padding-right: 25px 
         &__title
-            font-size: 14px
             color: $text-white   
         &__cards
             padding-bottom: 50px !important   
     .button
         &__filter
             display: block       
-    .modal-request-a-call
+    .modal-windows
         position: fixed
         z-index: 999
         left: 0
-        top: 0
-        width: 100%
-        height: 100%
-        overflow: auto
-        background-color: rgba(0,0,0,0.58)
-        &__content
-            border-top-right-radius: 5px
-            position: relative
+        top: 80px
+        bottom: auto
+        border-radius: 5px
+        right: 0
+        margin: 0 auto
+        &__triangle
+            display: none 
+        &__bg
+            width: 100%
+            height: 100%
+            top: 0 
+            left: 0
             right: 0
-            margin: 0 auto
-            &:before,
-            &:after
-                display: none     
+            bottom: 0
+            z-index: 998
+            background-color: rgba(0, 0, 0, .58)
+            position: absolute
+
+@media screen and (max-width: 830px)
+    .product-page
+        &__slider-image
+            height: 300px
+    #imageGallery-nav .slick-prev.slick-arrow
+        width: 70px
+        height: 70px
+    #imageGallery-nav .slick-next.slick-arrow
+        width: 70px
+        height: 70px
+    .slider
+        &-image1
+            left: 0 !important
+            right: 0
+        &-image2
+            left: 0 !important
+            right: 0
+        &-title1
+            left: 0
+            right: 0
+            top: auto
+            position: relative
+            text-align: center
+            font-size: 2rem
+        &-description1
+            left: 0
+            right: 0
+            h4
+                text-align: center
+            >div
+                text-align: center
+        &-description2
+            left: 0
+            right: 0
+            padding-top: 25px 
+            top: auto
+            position: relative
+            h4
+                text-align: center
+    .content
+        &__slider
+            &__image
+                img
+                    width: 100vh
+                    opacity: 0.5
 
 @media screen and(max-width: 500px)
     .header
@@ -210,7 +283,8 @@
         left: 0 !important
         width: 100%
         height: 100%
-        top: calc(100% - 38px)
+        top: auto
+        bottom: calc(-100% + 38px)
         &__menu
             height: calc(100% - 181px)
         &__title
@@ -223,13 +297,15 @@
             font-size: 18px
             &:hover
                 font-size: 22px    
-    .top-0
+    .bottom-0
         .sidebar__toggle-btn svg
             transform: rotate(180deg)
     .filter
         top: 0
         height: 100%
         width: 100%
+        .slider.slider-horizontal
+            width: 206px
         &__block
             width: 220px
             margin: 0 auto
@@ -247,6 +323,8 @@
         &__input
             width: 180px  
     .product-page
+        &__slider-image
+            height: 200px
         &__col-4
             display: block
             &-block
@@ -260,11 +338,73 @@
             text-align: start
             padding-bottom: 20px
         &__title
-            font-size: 25px  
-
+            font-size: 25px   
+    .content
+        height: auto !important
+        padding-bottom: 43px !important
+        &__bottom-block
+            bottom: 13px
+        &__slider
+            height: calc(100vh - 10.3rem) !important
+        &--home
+            height: calc(100vh - 5.3rem) !important
+            padding-bottom: 0 !important
+    body
+        overflow-y: auto
+    #imageGallery-nav .slick-prev.slick-arrow
+        width: 50px
+        height: 50px
+        left: -15px
+        background-color: rgba(71,69,69,0.5)
+    #imageGallery-nav .slick-next.slick-arrow
+        width: 50px
+        height: 50px   
+        right: -15px  
+        background-color: rgba(71,69,69,0.5) 
+    .slider
+        &-title1
+            font-size: 1.3rem
+        &-description2 h4
+            font-size: 1.2rem
+        &-description1 h4
+            font-size: 1.2rem
+            padding-top: 15px !important
+        &-block
+            height: calc(100vh - 10.3rem) !important
+            &__slide
+                height: calc(100vh - 10.3rem) !important
+        &-description4
+            position: relative
+            right: auto
+            bottom: auto
+            max-width: 100%
+            padding: 0 29px
+            .content__slider__description-title-fz
+                font-size: .6rem
+                margin: 0
+        &-description3
+            position: relative
+            top: auto
+            left: auto
+            max-width: 100%
+            padding: 0 29px
+            .content__slider__description-title-fz
+                font-size: .6rem
+                margin: 0
+            h4
+                padding-bottom: 5px !important
+                font-size: 1rem
+        &-block__bi
+            display: none
+    h5.content__slider-title
+        padding: 0 29px
+        text-align: left !important
+        font-size: 1rem
+    .products
+        &__title
+            font-size: 0.9rem
 @media screen and (max-width: 370px)
-    .modal-request-a-call
-        &__content
+    .modal-windows
             width: 280px            
     .style-form
         display: block
@@ -272,7 +412,142 @@
             padding: 0
         &__input
             width: 100%
-
-@media screen and (max-width: 300px)
+    .content__slider
+        &-arrow
+            svg
+                height: 60px
+    .slider
+        &-title1
+            font-size: 1.1rem
+        &-description2 h4
+            font-size: 1rem
+        &-description1 
+            position: relative
+            top: auto
+            h4
+                font-size: 1rem
+                padding-top: 5px !important
     .content
-        height: 100vh !important                        
+        &__bottom-block 
+            &-link
+                font-size: 12px
+    .button
+        &__arrow-black::after
+            display: none
+        &--drenched
+            padding: 9px 20px 8px 20px
+    h5.content__slider-title
+        font-size: .8rem
+        margin-bottom: 4px !important
+    .slider-description3 
+        h4
+            font-size: .8rem
+            margin-bottom: 2px
+        .content__slider__description-title-fz
+            font-size: .55rem
+    .slider-description4 
+        .content__slider__description-title-fz
+            font-size: .55rem
+@media screen and (max-width: 280px)
+    .content
+        &__slider
+            height: calc(100vh - 4.5rem) !important
+        &--home
+            height: calc(100vh - -0.6rem)!important
+    .slider
+        &-block
+            height: calc(100vh - 4.5rem) !important
+            &__slide
+                height: calc(100vh - 4.5rem) !important
+
+
+@media (max-width: 1370px) and (min-width: 1360px)
+    .slider
+        &-image1
+            left: calc(100vh - 60vh)  
+        &-image2
+            left: calc(100vh - 68vh)
+    h5.content__slider-title
+        font-size: 1.6rem
+    .content
+        &__slider
+            &__description
+                &-title-fz
+                    font-size: .9rem
+@media (max-width: 1370px) and (min-height: 1020px)
+      .slider
+        &-image2
+            left: calc(100vh - 85vh)
+
+@media (max-width: 1025px) and (min-width: 1020px)
+    .slider
+        &-image1
+            left: calc(100vh - 90vh) 
+        &-image2
+            left: calc(100vh - 100vh)
+@media (max-height: 770px) and (max-width: 1024px)
+    .slider
+        &-image1
+            left: calc(100vh - 50vh) 
+        &-image2
+            left: calc(100vh - 60vh) 
+    .content
+        &__slider
+            &__image img
+                opacity: 0.5
+@media (max-height: 768px) and (min-height: 768px) and (max-width: 1024px)
+    .slider
+        &-image1
+            left: calc(100vh - 60vh) 
+        &-image2
+            left: calc(100vh - 77vh) 
+
+// @media screen and (max-width: 1280px)
+//     .slider
+//         &-image2
+//             left: 0
+
+@media screen and (min-width: 1670px)
+    .content
+        &__slider
+            &-title
+                font-size: 2rem
+            &__description 
+                h4
+                    font-size: 1.7rem
+                &-title-fz
+                    font-size: 1.2rem
+    .slider
+        &-image2
+            left: calc(100vh - 75vh)
+        &-description3
+            max-width: 500px
+        &-description4
+            max-width: 500px
+
+@media screen and (min-width: 1800px)
+    .product-page
+        &__slider
+            &-image
+                height: 500px
+            .item
+                height: 150px
+                .item-img
+                    width: 100%
+    .content
+        &__slider
+            &-title
+                font-size: 3rem
+            &__description 
+                h4
+                    font-size: 2rem
+                &-title-fz
+                    font-size: 1.3rem
+    .slider
+        &-description3
+            top: 160px
+            max-width: 500px
+        &-description4
+            max-width: 500px
+        &-image2
+            left: calc(100vh - 70vh)
