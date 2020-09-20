@@ -618,9 +618,19 @@ a, a:hover
 			width: 15px
 // search -- end
 
-// modal-request -- start 	 			
-.modal-windows
+.mod
+	overflow-y: auto
 	position: fixed
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+	z-index: 99999
+	width: 100%
+	height: 100%
+// modal-windows -- start 	 			
+.modal-windows
+	position: absolute
 	padding: 35px 25px 25px 25px
 	z-index: 9999
 	background-color: $text-black
@@ -696,7 +706,7 @@ a, a:hover
 		cursor: pointer
 		img
 			width: 12px
-// modal-request -- end
+// modal-windows -- end
 
 // filter -- start 	 			
 .filter
