@@ -205,20 +205,26 @@
         bottom: auto
         border-radius: 5px
         right: 0
-        margin: 10px auto
+        margin: 25px auto
+        max-width: 290px
         &__triangle
             display: none 
         &__bg
             width: 100%
             height: 100%
-            top: 0 
+            top: 0
             left: 0
             right: 0
             bottom: 0
             z-index: 998
             background-color: rgba(0, 0, 0, .58)
             position: fixed
-
+    .style-form
+        display: block
+        label, &__label
+            padding: 0
+        &__input
+            width: 100%
 @media screen and (max-width: 830px)
     .product-page
         &__slider-image
@@ -386,14 +392,6 @@
         &__title
             font-size: 0.9rem
 @media screen and (max-width: 370px)
-    .modal-windows
-            width: 280px            
-    .style-form
-        display: block
-        label, &__label
-            padding: 0
-        &__input
-            width: 100%
     .content__slider
         &-arrow
             svg
