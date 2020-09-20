@@ -217,4 +217,29 @@ document.addEventListener("DOMContentLoaded", function () {
         $('body').removeClass('overflow-hidden');
     })
 
+    function Height(block, takeAway) {
+        let vh = window.innerHeight * 0.01;
+        let height = vh * 100 - takeAway;
+        $(block).css("height",height+'px');
+    }
+    if (window.innerWidth > 500) {
+        Height('.content', 60);
+        Height('.content__slider', 128);
+        Height('.slider-block__slide', 128);
+        window.addEventListener('resize', () => {
+            Height('.content', 60);
+            Height('.content__slider', 128);
+            Height('.slider-block__slide', 128);
+        });   
+    }else{
+        Height('.content', 97);
+        Height('.content__slider', 165);
+        Height('.slider-block__slide', 165);
+        window.addEventListener('resize', () => {
+            Height('.content', 97);
+            Height('.content__slider', 165);
+            Height('.slider-block__slide', 165);
+        });   
+    }
+
 });

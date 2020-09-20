@@ -5,8 +5,8 @@
 
 	<meta charset="utf-8">
 
-	<title>OptimizedHTML 5</title>
-	<meta name="description" content="Startup HTML template OptimizedHTML 5">
+	<title>NOVA-VEK</title>
+	<meta name="description" content="NOVA-VEK">
 
 	<meta name="viewport" content="width=device-width">
 
@@ -17,8 +17,27 @@
 </head>
 
 <body style="background-color: #000">
-	<div class="container-fluid">
-		<div class="row">
+	<div class="preloader">
+		<div id="bowlG">
+			<div id="bowl_ringG">
+				<div class="ball_holderG">
+					<div class="ballG">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+        window.onload = function () {
+            document.body.classList.add('loaded_hiding');
+            window.setTimeout(function () {
+                document.body.classList.add('loaded');
+                document.body.classList.remove('loaded_hiding');
+            }, 500);
+        }
+    </script>
+	<div class="container-fluid h-100">
+		<div class="row h-100">
 			<div class="sidebar" id="sidebar">
 				<div class="p-2 text-center sidebar__toggle-btn" id="sidebar__toggle-btn">
 					Продукция 
@@ -133,7 +152,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col p-0 position-relative">
+			<div class="col p-0 position-relative h-100">
 				<header class='header'>
 					<div class="row m-0 w-100">
 						<div class="col d-flex align-items-center">
@@ -463,9 +482,10 @@
 					</div>
 				</main>
 
-				<div class="modal-request-a-call d-none" id="block-dropdown-phone">
-					<div class="modal-request-a-call__content">
-						<div class="modal-request-a-call__close d-flex justify-content-center align-items-center">
+				<div class="d-none" id="block-dropdown-phone">
+					<span class="modal-windows__bg"></span>
+					<div class="modal-windows modal-windows--phone">
+						<div class="modal-windows__close d-flex justify-content-center align-items-center" id="block-dropdown-phone__close">
 							<img src="img/svg/cross.svg" alt="cross-icon">
 						</div>
 						<form>
@@ -481,7 +501,7 @@
 								<button class="button button--drenched w-sm-50">отправить</button>
 							</div>
 						</form>
-						<span class="modal-request-a-call__triangle"></span>
+						<span class="modal-windows__triangle modal-windows__triangle--phone"></span>
 					</div>	
 				</div>	
 

@@ -48,7 +48,7 @@
             display: flex
     .sidebar
         position: fixed
-        z-index: 999
+        z-index: 997
         left: -100%
         transition: 0.3s
         &__close
@@ -194,8 +194,6 @@
             padding-right: 25px 
         &__title
             color: $text-white   
-        &__cards
-            padding-bottom: 50px !important   
     .button
         &__filter
             display: block       
@@ -203,7 +201,7 @@
         position: fixed
         z-index: 999
         left: 0
-        top: 80px
+        top: 3%
         bottom: auto
         border-radius: 5px
         right: 0
@@ -339,18 +337,6 @@
             padding-bottom: 20px
         &__title
             font-size: 25px   
-    .content
-        height: auto !important
-        padding-bottom: 43px !important
-        &__bottom-block
-            bottom: 13px
-        &__slider
-            height: calc(100vh - 10.3rem) !important
-        &--home
-            height: calc(100vh - 5.3rem) !important
-            padding-bottom: 0 !important
-    body
-        overflow-y: auto
     #imageGallery-nav .slick-prev.slick-arrow
         width: 50px
         height: 50px
@@ -369,10 +355,6 @@
         &-description1 h4
             font-size: 1.2rem
             padding-top: 15px !important
-        &-block
-            height: calc(100vh - 10.3rem) !important
-            &__slide
-                height: calc(100vh - 10.3rem) !important
         &-description4
             position: relative
             right: auto
@@ -408,7 +390,7 @@
             width: 280px            
     .style-form
         display: block
-        &__label
+        label, &__label
             padding: 0
         &__input
             width: 100%
@@ -448,17 +430,6 @@
     .slider-description4 
         .content__slider__description-title-fz
             font-size: .55rem
-@media screen and (max-width: 280px)
-    .content
-        &__slider
-            height: calc(100vh - 4.5rem) !important
-        &--home
-            height: calc(100vh - -0.6rem)!important
-    .slider
-        &-block
-            height: calc(100vh - 4.5rem) !important
-            &__slide
-                height: calc(100vh - 4.5rem) !important
 
 
 @media (max-width: 1370px) and (min-width: 1360px)
