@@ -242,4 +242,10 @@ document.addEventListener("DOMContentLoaded", function () {
         });   
     }
 
+
+    $('.documentation__description-slider').slick({
+        arrows: false,
+        dots: true
+    });
+
 });

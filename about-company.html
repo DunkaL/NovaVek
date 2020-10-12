@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>NOVA-VEK</title>
+	<meta name="description" content="NOVA-VEK">
+
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="icon" href="img/favicon.png">
+	
+	<link rel="stylesheet" href="css/styles.min.css">
+
+</head>
+
+<body style="background-color: #000">
+	<div class="preloader">
+		<div id="bowlG">
+			<div id="bowl_ringG">
+				<div class="ball_holderG">
+					<div class="ballG">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+        window.onload = function () {
+            document.body.classList.add('loaded_hiding');
+            window.setTimeout(function () {
+                document.body.classList.add('loaded');
+                document.body.classList.remove('loaded_hiding');
+            }, 500);
+        }
+    </script>
+	<div class="container-fluid h-100">
+		<div class="row h-100">
+			<div class="sidebar" id="sidebar">
+				<div class="p-2 text-center sidebar__toggle-btn" id="sidebar__toggle-btn">
+					Продукция 
+					<svg xmlns="http://www.w3.org/2000/svg" width="11.245" height="6.602" viewBox="0 0 11.245 6.602">
+						<path d="M0,8.417,4.188,4.2,0,0" transform="translate(1.414 5.188) rotate(-90)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+					</svg>
+				</div>
+				<div class="sidebar__close" id="buttonSidebar-close">
+					<svg xmlns="http://www.w3.org/2000/svg" width="12" height="17" viewBox="0 0 5.07 10.75">
+						<path d="M0,7.974l2.682-4L0,0" transform="translate(3.682 9.362) rotate(180)" fill="none" stroke="#131313" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+					</svg>
+				</div>
+				<h5 class='sidebar__title'>Продукция</h5>
+				<ul class='sidebar__menu'>
+					<li class='sidebar__item'>
+						<a href="#" class='sidebar__link'>
+							<div class="sidebar__link-number">01</div>
+							<div class="sidebar__link-name">Уличное освещение</div>
+						</a>
+					</li>
+					<li class='sidebar__item'>
+						<a href="#" class='sidebar__link'>
+							<div class="sidebar__link-number">02</div>
+							<div class="sidebar__link-name">Магистральное освещение</div>
+						</a>
+					</li>
+					<li class='sidebar__item'>
+						<a href="#" class='sidebar__link'>
+							<div class="sidebar__link-number">03</div>
+							<div class="sidebar__link-name">Промышленное освещение</div>
+						</a>
+					</li>
+					<li class='sidebar__item'>
+						<a href="#" class='sidebar__link'>
+							<div class="sidebar__link-number">04</div>
+							<div class="sidebar__link-name">Прожектора</div>
+						</a>
+					</li>
+					<li class='sidebar__item'>
+						<a href="#" class='sidebar__link'>
+							<div class="sidebar__link-number">05</div>
+							<div class="sidebar__link-name">Мощные прожектора</div>
+						</a>
+					</li>
+					<li class='sidebar__item'>
+						<a href="#" class='sidebar__link'>
+							<div class="sidebar__link-number">06</div>
+							<div class="sidebar__link-name">Архитектурное освещение</div>
+						</a>
+					</li>
+					<li class='sidebar__item'>
+						<a href="#" class='sidebar__link'>
+							<div class="sidebar__link-number">07</div>
+							<div class="sidebar__link-name">Офисное освещение</div>
+						</a>
+					</li>
+					<li class='sidebar__item'>
+						<a href="#" class='sidebar__link'>
+							<div class="sidebar__link-number">08</div>
+							<div class="sidebar__link-name">Линейные светильники</div>
+						</a>
+					</li>
+					<li class='sidebar__item'>
+						<a href="#" class='sidebar__link'>
+							<div class="sidebar__link-number">09</div>
+							<div class="sidebar__link-name">Светильники High Bay</div>
+						</a>
+					</li>
+					<li class='sidebar__item'>
+						<a href="#" class='sidebar__link'>
+							<div class="sidebar__link-number">10</div>
+							<div class="sidebar__link-name">Парковые светильники</div>
+						</a>
+					</li>
+					<li class='sidebar__item'>
+						<a href="#" class='sidebar__link'>
+							<div class="sidebar__link-number">11</div>
+							<div class="sidebar__link-name">Светильники для АЗС</div>
+						</a>
+					</li>
+					<li class='sidebar__item'>
+						<a href="#" class='sidebar__link'>
+							<div class="sidebar__link-number">12</div>
+							<div class="sidebar__link-name">Проектное освещение</div>
+						</a>
+					</li>
+					<li class='sidebar__item'>
+						<a href="#" class='sidebar__link'>
+							<div class="sidebar__link-number">13</div>
+							<div class="sidebar__link-name">Светильники на Mean Well</div>
+						</a>
+					</li>
+					<li class='sidebar__item'>
+						<a href="#" class='sidebar__link'>
+							<div class="sidebar__link-number">14</div>
+							<div class="sidebar__link-name">Аксессуары</div>
+						</a>
+					</li>
+					<li class='sidebar__item'>
+						<a href="#" class='sidebar__link'>
+							<div class="sidebar__link-number">15</div>
+							<div class="sidebar__link-name">Снято с производства</div>
+						</a>
+					</li>
+				</ul> 
+				<div class="sidebar__contact">
+					<div> 
+						<a href="tel:88127008927">8(800) 700 89 27</a>
+					</div>
+					<div>
+						<a href="mailto:info@lazer-tor.ru">INFO@NOVA-VEK.RU</a>
+					</div>
+				</div>
+			</div>
+			<div class="col p-0 position-relative h-100">
+				<header class='header'>
+					<div class="row m-0 w-100">
+						<div class="col d-flex align-items-center">
+							<div class="header__menu-button-sidebar" id="buttonSidebar">
+								<svg xmlns="http://www.w3.org/2000/svg" width="15.07" height="15.75" viewBox="0 0 5.07 10.75">
+									<path d="M0,7.974l2.682-4L0,0" transform="translate(1.388 1.388)" fill="none" stroke="#BDBCBC" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+								</svg>
+							</div>
+							<a href="/" class='header__logo'>
+								<img src="img/logo.png" alt="logo">
+							</a>
+							<div class="col header__menu-nav">
+								<nav class="nav header__nav">
+									<li class="nav-item">
+										<span class="nav-link header__nav-link d-flex align-items-center">
+											о компании 
+											<span class="caret d-flex">
+												<svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 10.75 5.07">
+													<path d="M0,7.974l2.682-4L0,0" transform="translate(9.362 1.388) rotate(90)" fill="none" stroke="#bdbcbc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+												</svg>
+											</span>
+										</span>
+										<ul class="header__nav-sub">
+											<li class="nav-item">
+												<a class="nav-link header__nav-link d-flex align-items-center" href="#">Промышленное освещение</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link header__nav-link d-flex align-items-center" href="#">Торговое освещение</a>
+											</li>
+											<li class="nav-item">
+												<span class="nav-link header__nav-link d-flex align-items-center">Торговое освещение
+													<span class="caret d-flex">
+														<svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 10.75 5.07">
+															<path d="M0,7.974l2.682-4L0,0" transform="translate(9.362 1.388) rotate(90)" fill="none" stroke="#bdbcbc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+														</svg>
+													</span>
+												</span>
+												<ul class="header__nav-sub header__nav-sub-sub">
+													<li class="nav-item">
+														<a class="nav-link header__nav-link d-flex align-items-center" href="#">Промышленное освещение</a>
+													</li>
+													<li class="nav-item">
+														<a class="nav-link header__nav-link d-flex align-items-center" href="#">Торговое освещение</a>
+													</li>
+													<li class="nav-item">
+														<span class="nav-link header__nav-link d-flex align-items-center">Торговое освещение
+															<span class="caret d-flex">
+																<svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 10.75 5.07">
+																	<path d="M0,7.974l2.682-4L0,0" transform="translate(9.362 1.388) rotate(90)" fill="none" stroke="#bdbcbc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+																</svg>
+															</span>
+														</span>
+														<ul class="header__nav-sub header__nav-sub-sub">
+															<li class="nav-item">
+																<a class="nav-link header__nav-link d-flex align-items-center" href="#">Промышленное освещение</a>
+															</li>
+															<li class="nav-item">
+																<a class="nav-link header__nav-link d-flex align-items-center" href="#">Торговое освещение</a>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link header__nav-link d-flex align-items-center" href="#">Торговое освещение</a>
+											</li>
+										</ul>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link header__nav-link d-flex align-items-center" href="#">где купить</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link header__nav-link d-flex align-items-center" href="#">партнерам</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link header__nav-link d-flex align-items-center" href="#">скачать</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link header__nav-link d-flex align-items-center" href="products.html">цены</a>
+									</li>
+								 	<li class="nav-item">
+										<a class="nav-link header__nav-link d-flex align-items-center" href="contacts.html">контакты</a>
+									</li>
+								</nav>
+								<div class="ml-auto header__block">
+									<form class="search">
+										<input type="text" class="search__input" placeholder="Поиск по коду товара...">
+										<button class='search__button'>
+											<img src="img/svg/search.svg" alt="icon-search" class="search__button-icon">
+										</button>
+									</form>
+									<button class="button button--drenched button__icon-phone d-flex header__button-phone" id="button-dropdown-phone"> 
+										<span>заказать звонок</span>	
+									</button>
+								</div>
+							</div>
+							<button class="burger ml-auto" type="button" id="navToggle">
+								<span class="burger__item">Menu</span>
+							</button>
+						</div>
+					</div>
+				</header>
+
+				<main class="col p-0 content" id="content">
+
+                    <div class="col py-2 about-company">
+                        <h1 class="page-header">о компании</h1>
+                        <div class="row">
+                            <div class="col-12 text-center pt-1 px-3 pb-2">
+                                <img src="img/logo.png" alt="logo" class="about-company__logo">
+                            </div>
+                            <div class="col-lg-6 text-md-center pt-1 px-3 pb-2">
+                                <div class="about-company__block">
+                                    Команда нашей компании уже <span class="text-color-green">более 7 лет</span> принимает активное участие в формировании и развитии рынка светодиодного освещения в качестве технических специалистов, конструкторов, а также проектировщиков светодиодных светильников и систем светодиодного освещения. Продукция, разработанная нашими специалистами, <span class="text-color-green">производится крупносерийно уже более 5 лет и прекрасно себя зарекомендовала на более чем 2 000 объектах</span> по всей России, в странах бывшего Советского Союза и ряде Европейских стран.    
+                                </div>
+                            </div>
+                            <div class="col-lg-6 text-md-center pt-1 px-3 pb-2">
+                                <div class="about-company__block">
+                                    Продукция собственного производства находясь в бюджетном ценовом сегменте, сочетая в себе <span class="text-color-green">надежность, высокое качество, долговечность и максимальное использование проверенных российских комплектующих.</span> За эти 5 лет нами переведено на светодиодное освещение более <span class="text-color-green">700</span> объектов, что сформировало о нас репутацию надежного и профессиональность партнера в различных областях, будь то проектирование и производство светильника под <span class="text-color-green">индивидуальные</span> требования Заказчика или оптово-розничные поставки светодиодного освещения.
+                                </div>
+                            </div>
+                            <div class="col-12 text-md-center pt-1 px-3 pb-2 ">
+                                <div class="about-company__block">
+                                    <span class="text-color-green">Многолетний опыт</span> в разработке и проектирования светодиодных источников света подтолкнул нас к созданию <span class="text-color-green">своей собственной компании по производству и продаже светодиодного освещения.</span> Уже более 6 лет работает, основанный нашей командой, торговый дом <span class="text-color-green">"Светоград"</span>, занимающийся оптовыми и розничными поставками светодиодного освещения собственного производства.
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="about-company__form">
+                                    <h2 class="about-company__form-title">Задать вопрос директору компании</h2>
+                                    <form class="row mt-4">
+    
+                                        <div class="col-lg-12 col-xl-4 d-flex align-items-center justify-content-md-start justify-content-xl-end">
+                                            <div class="about-company__form-group">
+                                                <div class="form-group style-form">
+                                                    <label for="name" class="style-form__label">Имя</label>
+                                                    <input id="name" type="name" class="form-control style-form__input" name="name" placeholder="ваше имя">
+                                                </div>
+                                                <div class="form-group style-form">
+                                                    <label for="name" class="style-form__label">Электронная почта</label>
+                                                    <input id="mail" type="email" class="form-control style-form__input" name="email" placeholder="example@mail.ru">
+                                                </div>
+                                            </div>
+                                        </div>
+    
+                                        <div class="col-lg-12 col-xl-4">
+                                            <div class="form-group style-form m-0">
+                                                <textarea class="form-control style-form__textarea" placeholder="Введите сообщение"></textarea>
+                                            </div>
+                                        </div>
+    
+                                        <div class="col-lg-12 col-xl-4 py-2 d-flex align-items-center justify-content-start">
+                                            <button class="button button--drenched">Отправить</button>
+                                        </div>
+    
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+				</main>
+
+				<div class="d-none" id="block-dropdown-phone">
+					<span class="modal-windows__bg"></span>
+					<div class="modal-windows modal-windows--phone">
+						<div class="modal-windows__close d-flex justify-content-center align-items-center" id="block-dropdown-phone__close">
+							<img src="img/svg/cross.svg" alt="cross-icon">
+						</div>
+						<form>
+							<div class="form-group style-form">
+								<label for="name" class="style-form__label">Имя</label>
+								<input id="name" type="name" class="form-control style-form__input" name="name" placeholder="ваше имя">
+							</div>
+							<div class="form-group style-form">
+								<label for="phone" class="style-form__label">Телефон</label>
+								<input id="phone" type="phone" class="form-control style-form__input" name="phone"  placeholder="+7 …">
+							</div>
+							<div class="text-center">
+								<button class="button button--drenched w-sm-50">отправить</button>
+							</div>
+						</form>
+						<span class="modal-windows__triangle modal-windows__triangle--phone"></span>
+					</div>	
+				</div>	
+			</div>
+		</div>
+	</div>
+	<script src="js/scripts.min.js"></script>					
+</body>
+</html>
